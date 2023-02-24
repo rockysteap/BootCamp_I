@@ -12,30 +12,29 @@
 //               _____
 // 0 1 2 3 4 5 6 7 8 9  <- 8 групп по 3 или по формуле n - m + 1, где n- размерность, m- длина выборки
 
-int[] GetRangeSum(int[] array, int m)
-{
-    int n = array.Length;
-    int[] t = new int[n - m + 1];
+// int[] GetRangeSum(int[] array, int m)
+// {
+//     int n = array.Length;
+//     int[] t = new int[n - m + 1];
 
-    int index = 0;
-    //           0 -> ((15-5)+1)=11
-    for (int i = 0; i < n - m + 1; i++)
-    {
-        //           0 -> (< (0+)+5)
-        for (int j = i; j < i + m; j++)
-        {
-            t[index] += array[j];
-        }
-        index++;
-    }
-    return t;
-}
+//     int index = 0;
+//     //           0 -> ((15-5)+1)=11
+//     for (int i = 0; i < n - m + 1; i++)
+//     {
+//         //           0 -> (< (0+)+5)
+//         for (int j = i; j < i + m; j++)
+//         {
+//             t[index] += array[j];
+//         }
+//         index++;
+//     }
+//     return t;
+// }
 
 int[] GetRangeSum2(int[] array, int m)
 {
     int n = array.Length;
     int[] t = new int[n - m + 1];
-    int sum = 0;
     int index = 0;
     //           0 < 2          
     for (int i = 0; i < m; i++) t[index] += array[i];
