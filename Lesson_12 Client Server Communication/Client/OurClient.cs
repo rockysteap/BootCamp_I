@@ -24,11 +24,11 @@ namespace Client
             while (true)
             {
                 System.Console.Write("> ");
-                string message = Console.ReadLine();
+                string message = Console.ReadLine()!;
                 _sWriter.WriteLine(message);
                 _sWriter.Flush();
 
-                string answerServer = _sReader.ReadLine();
+                string answerServer = _sReader.ReadLine()!;
                 Console.WriteLine($"Сервер ответил -> {answerServer}");
             }
         }

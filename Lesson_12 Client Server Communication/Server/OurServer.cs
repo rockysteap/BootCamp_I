@@ -34,11 +34,11 @@ namespace Server
 
             while (true)
             {
-                string message = _sReader.ReadLine();
+                string message = _sReader.ReadLine()!;
                 Console.WriteLine($"Клиент написал - {message}");
 
                 Console.WriteLine("Дайте сообщение клиенту: ");
-                string answer = Console.ReadLine();
+                string answer = Console.ReadLine()!;
                 _sWriter.WriteLine(answer);
                 _sWriter.Flush();
             }
